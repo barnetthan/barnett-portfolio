@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import TaskItem from "../components/TaskItem";
 
@@ -12,8 +12,23 @@ function ToDoListPage() {
   const [taskList, setTaskList] = useState<Task[]>([]);
   const [curId, setCurId] = useState<number>(0);
   const [selectedIds, setSelectedIds] = useState<number[]>([]);
+  const [noTask, setNoTask] = useState<boolean>(false);
+
+  useEffect (() => {
+    if (localStorage.getItem("tasks")) {
+      setTaskList(JSON.parse(localStorage.getItem("tasks")!));
+    }
+    if (localStorage.getItem("id")) {
+      setCurId(JSON.parse(localStorage.getItem("id")!));
+    }
+  }, []);
 
   function addTask() {
+    if (!taskInput) {
+      setNoTask(true);
+      return;
+    }
+    setNoTask(false);
     const newTask: Task = {
       task: taskInput,
       id: curId,
@@ -22,11 +37,17 @@ function ToDoListPage() {
     setTaskList([...taskList, newTask]);
     setCurId(curId + 1);
     setTaskInput("");
+
+    localStorage.setItem("tasks", JSON.stringify([...taskList, newTask]));
+    localStorage.setItem("id", JSON.stringify(curId + 1));
   }
 
   function deleteTasks() {
-    setTaskList(taskList.filter((task) => selectedIds.indexOf(task.id) < 0));
+    const updatedList = taskList.filter((task) => selectedIds.indexOf(task.id) < 0);
+    setTaskList(updatedList);
     setSelectedIds([]);
+    
+    localStorage.setItem("tasks", JSON.stringify(updatedList));
   }
 
   return (
@@ -58,7 +79,6 @@ function ToDoListPage() {
           >
             Submit
           </button>
-          &nbsp;
           {selectedIds.length > 0 ? (
             <button
               onClick={() => {
@@ -70,6 +90,10 @@ function ToDoListPage() {
           ) : (
             <></>
           )}
+          {noTask ? <><div style={{display:"flex", justifyContent:"center", color:"red"}}>
+            No task inputted!
+          </div>
+          <hr/></> : <></>}
         </div>
         <ul style={{ listStyle: "none" }}>
           {taskList.map((task) => (<TaskItem key={task.id} task={task.task} setSelectedIds={setSelectedIds} id={task.id}/>))}
