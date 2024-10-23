@@ -61,7 +61,6 @@ function ToDoListPage() {
         }}
       >
         <h1 style={{ textDecoration: "underline" }}>
-          &nbsp;
           To Do List ({taskList.length})
         </h1>
         <div>
