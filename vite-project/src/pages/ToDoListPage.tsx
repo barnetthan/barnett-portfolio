@@ -9,12 +9,13 @@ interface Task {
 
 function ToDoListPage() {
   const [taskInput, setTaskInput] = useState<string>("");
+  const [searchQuery, setSearchQuery] = useState<string>("");
   const [taskList, setTaskList] = useState<Task[]>([]);
   const [curId, setCurId] = useState<number>(0);
   const [selectedIds, setSelectedIds] = useState<number[]>([]);
   const [noTask, setNoTask] = useState<boolean>(false);
 
-  useEffect (() => {
+  useEffect(() => {
     if (localStorage.getItem("tasks")) {
       setTaskList(JSON.parse(localStorage.getItem("tasks")!));
     }
@@ -43,10 +44,12 @@ function ToDoListPage() {
   }
 
   function deleteTasks() {
-    const updatedList = taskList.filter((task) => selectedIds.indexOf(task.id) < 0);
+    const updatedList = taskList.filter(
+      (task) => selectedIds.indexOf(task.id) < 0
+    );
     setTaskList(updatedList);
     setSelectedIds([]);
-    
+
     localStorage.setItem("tasks", JSON.stringify(updatedList));
   }
 
@@ -64,6 +67,17 @@ function ToDoListPage() {
           To Do List ({taskList.length})
         </h1>
         <div>
+          Search: &nbsp;
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+            }}
+          />
+        </div>
+        <br />
+        <div>
           Add New Task: &nbsp;
           <input
             type="text"
@@ -78,24 +92,53 @@ function ToDoListPage() {
           >
             Submit
           </button>
-          {selectedIds.length > 0 ? (
-            <button
-              onClick={() => {
-                deleteTasks();
-              }}
-            >
-              Delete {selectedIds.length} Selected Task(s)
-            </button>
+          {noTask ? (
+            <>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  color: "red",
+                }}
+              >
+                No task inputted!
+              </div>
+              <hr />
+            </>
           ) : (
             <></>
           )}
-          {noTask ? <><div style={{display:"flex", justifyContent:"center", color:"red"}}>
-            No task inputted!
-          </div>
-          <hr/></> : <></>}
         </div>
+        <br/>
+  
+        <button
+          onClick={() => {
+            deleteTasks();
+          }}
+          disabled={selectedIds.length == 0}
+        >
+          Delete {selectedIds.length} Selected Task(s)
+        </button>
+         
         <ul style={{ listStyle: "none" }}>
-          {taskList.map((task) => (<TaskItem key={task.id} task={task.task} setSelectedIds={setSelectedIds} id={task.id}/>))}
+          {taskList
+            .filter((task) => {
+              if (
+                searchQuery == "" ||
+                task.task.toLowerCase().includes(searchQuery)
+              ) {
+                return task;
+              }
+            })
+            .map((task) => (
+              <TaskItem
+                key={task.id}
+                task={task.task}
+                selectedIds={selectedIds}
+                setSelectedIds={setSelectedIds}
+                id={task.id}
+              />
+            ))}
         </ul>
       </div>
     </>
