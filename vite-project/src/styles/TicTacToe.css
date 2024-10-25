@@ -1,9 +1,9 @@
 .gameBox {
   border-style:  solid;
   border-color: black;
-  width: 100px; 
-  height: 100px; 
-  font-size: 100px; 
+  width: 20vh; 
+  height: 20vh; 
+  font-size: 20vh; 
   display: flex;
   align-items: center;
   justify-content: center;
