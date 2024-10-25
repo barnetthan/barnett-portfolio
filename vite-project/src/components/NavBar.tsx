@@ -37,17 +37,28 @@ export default function NavBar({ curPage } : NavBarProps) {
             To-Do List
           </NavLink>
         </li>
-          <li>
-            <NavLink
-              className="uladjust"
-              style={{
-                textDecorationLine: curPage == "game" ? "underline" : "none",
-              }}
-              to="/game"
-            >
-              Game
-            </NavLink>
-          </li>
+        <li>
+          <NavLink
+            className="uladjust"
+            style={{
+              textDecorationLine: curPage == "game" ? "underline" : "none",
+            }}
+            to="/game"
+          >
+            Game
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className="uladjust"
+            style={{
+              textDecorationLine: curPage == "recipe" ? "underline" : "none",
+            }}
+            to="/recipes"
+          >
+            Recipes
+          </NavLink>
+        </li>
         <li>
           <NavLink
             className="uladjust"

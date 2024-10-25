@@ -1,0 +1,28 @@
+.listBox {
+  border-style:  solid;
+  border-color: black;
+  width: 35vw; 
+  height: 70vh; 
+  margin: 5vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.listItem {
+  border-bottom: solid;
+  border-color: black;
+  width: 35vw; 
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  padding-left: 1vw;
+}
+
+.infoBox {
+  border-style:  solid;
+  border-color: black;
+  width: 40vw; 
+  height: 75vh; 
+  overflow-y: scroll;
+}
+
