@@ -1,8 +1,8 @@
 import NavBar from "../components/NavBar";
-import RecipeData from "../data/recipeData.json";
+import Data from "../data/recipeData.json";
 import RecipeInfoBox from "../components/RecipeInfoBox";
 import RecipeListBox from "../components/RecipeListBox";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export interface Recipe {
   id: number;
@@ -12,7 +12,15 @@ export interface Recipe {
 }
 
 function RecipePage() {
-  const [cur, setCur] = useState<Recipe>(RecipeData[0]);
+  const [cur, setCur] = useState<Recipe | null>(null);
+  const [recipes, setRecipes] = useState<Recipe[]>(Data);
+
+  useEffect(() => {
+    if (localStorage.getItem("recipes")) {
+      setRecipes(JSON.parse(localStorage.getItem("recipes")!));
+      setCur(JSON.parse(localStorage.getItem("recipes")!)[0]);
+    }
+  }, []);
 
   return (
     <>
@@ -33,7 +41,7 @@ function RecipePage() {
           justifyContent: "center",
         }}
       >
-        <RecipeListBox recipes={RecipeData} cur={cur} setCur={setCur} />
+        <RecipeListBox recipes={recipes} setRecipes={setRecipes} cur={cur} setCur={setCur} />
         <RecipeInfoBox cur={cur} />
       </div>
     </>
