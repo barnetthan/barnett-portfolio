@@ -86,6 +86,7 @@ function ToDoListPage() {
           />
           &nbsp;
           <button
+            style={{ cursor: "pointer" }}
             onClick={() => {
               addTask();
             }}
@@ -109,9 +110,10 @@ function ToDoListPage() {
             <></>
           )}
         </div>
-        <br/>
-  
+        <br />
+
         <button
+          style={{ cursor: "pointer" }}
           onClick={() => {
             deleteTasks();
           }}
@@ -119,7 +121,7 @@ function ToDoListPage() {
         >
           Delete {selectedIds.length} Selected Task(s)
         </button>
-         
+
         <ul style={{ listStyle: "none" }}>
           {taskList
             .filter((task) => {

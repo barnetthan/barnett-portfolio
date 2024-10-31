@@ -1,13 +1,17 @@
-import NavBar from '../components/NavBar';
+import NavBar from "../components/NavBar";
 import { useEffect, useState } from "react";
-import GameBox from '../components/GameBox';
+import GameBox from "../components/GameBox";
 
 function GamePage() {
   // let arr = [["X", "X", "X"], ["X", "X", "X"], ["X", "X", "X"]];
 
-  const [arr, setArr] = useState<string[][]>([["", "", ""], ["", "", ""], ["", "", ""]]);
+  const [arr, setArr] = useState<string[][]>([
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""],
+  ]);
   const [curMarker, setCurMarker] = useState<string>("X");
-  const [msg, setMsg] = useState<string> ("");
+  const [msg, setMsg] = useState<string>("");
   const [p1Wins, setP1Wins] = useState<number>(0);
   const [p2Wins, setP2Wins] = useState<number>(0);
   const [moves, setMoves] = useState<number>(0);
@@ -19,8 +23,8 @@ function GamePage() {
       } else {
         setMoves(moves + 1);
         setMsg("");
-        const tmp = [...arr]; 
-        tmp[i][j] = curMarker; 
+        const tmp = [...arr];
+        tmp[i][j] = curMarker;
         setArr(tmp);
         if (checkWin()) {
           setMsg("win");
@@ -30,19 +34,32 @@ function GamePage() {
             setMsg("tie");
           }
           setCurMarker(curMarker == "X" ? "O" : "X");
-        } 
+        }
       }
     }
   }
 
   function displayMessage() {
-    switch(msg) {
+    switch (msg) {
       case "error":
-        return <div style={{color: "red"}}>Square is already taken. Please try again.</div>;
+        return (
+          <div style={{ color: "red" }}>
+            Square is already taken. Please try again.
+          </div>
+        );
       case "tie":
-        return <div style={{color: "orange"}}>No more moves possible. Click reset to play again.</div>;
+        return (
+          <div style={{ color: "orange" }}>
+            No more moves possible. Click reset to play again.
+          </div>
+        );
       case "win":
-        return <div style={{color: "green"}}>Player {curMarker == "X" ? "1" : "2"} has won! Click reset to play again.</div>;
+        return (
+          <div style={{ color: "green" }}>
+            Player {curMarker == "X" ? "1" : "2"} has won! Click reset to play
+            again.
+          </div>
+        );
       default:
         return <></>;
     }
@@ -54,7 +71,7 @@ function GamePage() {
       let horiz = arr[i][0];
       let vert = arr[0][i];
       let horizValid = horiz == "" ? false : true;
-      let vertValid = vert == "" ? false: true;
+      let vertValid = vert == "" ? false : true;
       for (let j = 0; j < arr.length; j++) {
         if (arr[i][j] != horiz) {
           horizValid = false;
@@ -78,7 +95,11 @@ function GamePage() {
   }
 
   function resetGame() {
-    setArr([["", "", ""], ["", "", ""], ["", "", ""]]);
+    setArr([
+      ["", "", ""],
+      ["", "", ""],
+      ["", "", ""],
+    ]);
     setCurMarker("X");
     setMsg("");
     setMoves(0);
@@ -86,7 +107,7 @@ function GamePage() {
 
   return (
     <>
-      <NavBar curPage = "game"/>
+      <NavBar curPage="game" />
       <div
         style={{
           display: "flex",
@@ -94,29 +115,30 @@ function GamePage() {
           alignItems: "center",
         }}
       >
-        <h1 style={{ textDecoration: "underline" }}>
-          Tic-Tac-Toe
-        </h1>
+        <h1 style={{ textDecoration: "underline" }}>Tic-Tac-Toe</h1>
         <div>
           Player 1 wins (X): {p1Wins}
-          &nbsp;
-          Player 2 wins (O): {p2Wins}
+          &nbsp; Player 2 wins (O): {p2Wins}
         </div>
-        <div>It is Player {curMarker == "X" ? 1 : 2}'s turn ({curMarker})</div>
-        <br/>
-        <button onClick={resetGame}>Reset Game</button>
-        <br/>
+        <div>
+          It is Player {curMarker == "X" ? 1 : 2}'s turn ({curMarker})
+        </div>
+        <br />
+        <button style={{ cursor: "pointer" }} onClick={resetGame}>
+          Reset Game
+        </button>
+        <br />
         {displayMessage()}
-        {arr.map((row, r) => 
-          (
-            <div style={{display: "flex", flexDirection: "row"}}> 
-              {row.map((val, c) => (<GameBox marker={val} makeMove={makeMove} i = {r} j = {c} msg = {msg}/>))}
-            </div>
-          )
-        )}
+        {arr.map((row, r) => (
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            {row.map((val, c) => (
+              <GameBox marker={val} makeMove={makeMove} i={r} j={c} msg={msg} />
+            ))}
+          </div>
+        ))}
       </div>
     </>
-  )
+  );
 }
 
 export default GamePage;
