@@ -60,29 +60,28 @@ function RecipeListItem({
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        backgroundColor: cur && cur.id == recipe.id ? "lightgray" : "white",
+        backgroundColor: cur && cur.id == recipe.id ? "#505763" : "#3A3F4B",
       }}
     >
       <div
-        style={{ fontWeight: cur && cur.id == recipe.id ? "bolder" : "normal" }}
+        style={{ fontWeight: cur && cur.id == recipe.id ? "bolder" : "normal", backgroundColor: "inherit"}}
       >
         {recipe.title}
       </div>
       <div
-        style={{ display: "flex", alignItems: "center", marginRight: "10px" }}
+        style={{ display: "flex", alignItems: "center", marginRight: "10px", backgroundColor: "inherit" }}
       >
         <div
-          style={{ cursor: "pointer", marginRight: "10px" }}
+          style={{ cursor: "pointer", marginRight: "10px", backgroundColor: "inherit" }}
           onClick={handleFavorite}
         >
-          {faveIds.includes(recipe.id) ? <FaStar /> : <FaRegStar />}
+          {faveIds.includes(recipe.id) ? <FaStar style={{backgroundColor: "inherit"}} /> : <FaRegStar style={{backgroundColor: "inherit"}} />}
         </div>
-        <button style={{ cursor: "pointer" }} onClick={handleDelete}>
+        <button onClick={handleDelete}>
           Delete
         </button>
         &nbsp;
         <button
-          style={{ cursor: "pointer" }}
           onClick={() => {
             setCur(recipe);
           }}

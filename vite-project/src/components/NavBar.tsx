@@ -11,13 +11,13 @@ export default function NavBar({ curPage } : NavBarProps) {
 
   return (
     <nav className="nav">
-      <a href="/home">
-        <h1>React Projects</h1>
+      <a href="/">
+        <h1 className="site-title">Barnett Han</h1>
       </a>
-      <ul style={{ marginRight: 50 }}>
-        <li className="special">
+      <ul style={{ marginRight: 50, marginTop: "18px" }}>
+        <li>
           <NavLink
-            className="uladjust"
+            className="nav-item"
             style={{
               textDecorationLine: curPage == "home" ? "underline" : "none",
             }}
@@ -28,46 +28,35 @@ export default function NavBar({ curPage } : NavBarProps) {
         </li>
         <li>
           <NavLink
-            className="uladjust"
+            className="nav-item"
             style={{
-              textDecorationLine: curPage == "todolist" ? "underline" : "none",
+              textDecorationLine: curPage == "projects" ? "underline" : "none",
             }}
-            to="/todolist"
+            to="/projects"
           >
-            To-Do List
+            Projects
           </NavLink>
         </li>
         <li>
           <NavLink
-            className="uladjust"
-            style={{
-              textDecorationLine: curPage == "game" ? "underline" : "none",
-            }}
-            to="/game"
-          >
-            Game
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            className="uladjust"
-            style={{
-              textDecorationLine: curPage == "recipe" ? "underline" : "none",
-            }}
-            to="/recipes"
-          >
-            Recipes
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            className="uladjust"
+            className="nav-item"
             style={{
               textDecorationLine: curPage == "resume" ? "underline" : "none",
             }}
             to="/resume"
           >
             Resume
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className="nav-item"
+            style={{
+              textDecorationLine: curPage == "about" ? "underline" : "none",
+            }}
+            to="/about"
+          >
+            About
           </NavLink>
         </li>
       </ul>

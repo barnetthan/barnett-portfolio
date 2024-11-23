@@ -1,3 +1,5 @@
+import "../styles/App.css"
+
 interface TaskItemProps {
   task: string;
   selectedIds: number[];
@@ -20,13 +22,13 @@ function TaskItem({ task, selectedIds, setSelectedIds, id }: TaskItemProps) {
 
   return (
     <li>
-      <label>
+      <label style={{display: "flex", justifyContent: "center"}}>
         <input
           type="checkbox"
           checked={selectedIds.includes(id)}
           onChange={updateCheck}
         />
-        {task}
+        &nbsp; {task}
       </label>
     </li>
   );

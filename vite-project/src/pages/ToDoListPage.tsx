@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import TaskItem from "../components/TaskItem";
+import "../styles/App.css"
 
 interface Task {
   task: string;
@@ -55,7 +56,7 @@ function ToDoListPage() {
 
   return (
     <>
-      <NavBar curPage="todolist" />
+      <NavBar curPage="projects" />
       <div
         style={{
           display: "flex",
@@ -83,10 +84,10 @@ function ToDoListPage() {
             type="text"
             value={taskInput}
             onChange={(e) => setTaskInput(e.target.value)}
+            className="input"
           />
           &nbsp;
-          <button
-            style={{ cursor: "pointer" }}
+          <button className="button"
             onClick={() => {
               addTask();
             }}
@@ -113,7 +114,6 @@ function ToDoListPage() {
         <br />
 
         <button
-          style={{ cursor: "pointer" }}
           onClick={() => {
             deleteTasks();
           }}

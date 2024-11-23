@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
 }
@@ -7,23 +6,33 @@ body {
   margin: 0;
 }
 
-
 .nav {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   color: rgb(0, 0, 0);
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
-  padding: 0 1 rem;
-  border-bottom: thin solid gray;
+  border-bottom: thin solid #4B5263;
   font-family: 'Roboto';
-
+  /* padding-bottom: 5px; */
 }
 
 .site-title {
-  /* padding-left: 1rem; */
-  font-size: 2rem;
+  cursor: pointer;
+}
+
+.site-title:hover {
+  color: #ffffff;
+  transform: scale(1.02); /* Slight enlargement */
+  text-shadow: 0 0 10px #5bc0de; /* Glow effect with cyan shade */
+  z-index: 100;
+}
+
+/* Optional: Add focus or active state for better accessibility */
+.site-title:focus, .site-title:active {
+  color: #5bc0de; /* Highlight color */
+  outline: none;
 }
 
 .nav h1 {
@@ -34,8 +43,6 @@ body {
 }
 
 .nav ul {
-  padding: 0;
-  margin: 0;
   list-style: none;
   display: flex;
   gap: 1rem;
@@ -47,7 +54,7 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: .25rem;
+  padding: 0 .25rem;
 } 
 
 .links {
@@ -60,16 +67,6 @@ body {
   font-family: 'Roboto';
 }
 
-.nav p {
-  padding-left: 2rem;
-  padding-right: 1rem;
-  padding-top: 10px;
-  align-items: center;
-  font-size: 16px;
-  font-family: 'Roboto';
-  cursor: pointer;
-  white-space: nowrap;
-}
 
 .nav img {
   border-radius: 50%;
@@ -79,9 +76,26 @@ body {
   margin-right: 18px;
 }
 
-.uladjust {
+.nav-item {
   text-underline-offset: 4px;
   font-size: 18px;
+  color: #e6e6e6; /* Light text color for contrast */
+  /* font-size: 1.5rem; */
+  font-weight: bold;
+  transition: all 0.3s ease-in-out; /* Smooth animation for hover effects */
+  cursor: pointer;
 }
 
+.nav-item:hover {
+  color: #ffffff; /* Slightly brighter text on hover */
+  transform: scale(1.1); /* Slight enlargement */
+  text-shadow: 0 0 10px #5bc0de; /* Glow effect with cyan shade */
+  z-index: 100;
+}
+
+/* Optional: Add focus or active state for better accessibility */
+.nav-item:focus, .nav-item:active {
+  outline: none;
+  color: #5bc0de; /* Highlight color */
+}
 

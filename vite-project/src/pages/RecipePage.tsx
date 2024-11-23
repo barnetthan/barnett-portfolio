@@ -24,7 +24,7 @@ function RecipePage() {
 
   return (
     <>
-      <NavBar curPage="recipe" />
+      <NavBar curPage="projects" />
       <div
         style={{
           display: "flex",
@@ -38,7 +38,7 @@ function RecipePage() {
         style={{
           display: "flex",
           flexDirection: "row",
-          justifyContent: "center",
+          justifyContent: "space-evenly",
         }}
       >
         <RecipeListBox recipes={recipes} setRecipes={setRecipes} cur={cur} setCur={setCur} />

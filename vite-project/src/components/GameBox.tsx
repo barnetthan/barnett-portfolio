@@ -13,7 +13,6 @@ function GameBox({ marker, makeMove, i, j, msg }: GameBoxProps) {
 
   return (
     <div onClick={() => makeMove(i, j)} className="gameBox" style={{cursor: msg != "tie" && msg != "win" ? "pointer" : "default"}}>
-
       {marker}
     </div>
   );

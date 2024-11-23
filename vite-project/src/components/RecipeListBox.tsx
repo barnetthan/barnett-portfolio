@@ -52,11 +52,12 @@ function RecipeListBox({
         setRecipes={setRecipes}
         setCur={setCur}
       />
-      <div>
+      <div style={{pointerEvents: modalOpen ? "none" : "auto", cursor: modalOpen ? "default" : "auto"}}>
         <div
           style={{
             display: "flex",
             justifyContent: "center",
+            alignItems: "center"
           }}
         >
           <b>Search Recipes</b>&nbsp;
@@ -77,12 +78,11 @@ function RecipeListBox({
           }}
         >
           &nbsp; &nbsp;
-          <button style={{ cursor: "pointer" }} onClick={restoreRecipes}>
+          <button onClick={restoreRecipes}>
             Restore All Recipes
           </button>
           &nbsp; &nbsp;
           <button
-            style={{ cursor: "pointer" }}
             onClick={() => {
               setShowFaves(!showFaves);
             }}
@@ -91,7 +91,6 @@ function RecipeListBox({
           </button>
           &nbsp; &nbsp;
           <button
-            style={{ cursor: "pointer" }}
             onClick={clearFaves}
             disabled={faveIds.length == 0}
           >
@@ -99,7 +98,6 @@ function RecipeListBox({
           </button>
           &nbsp; &nbsp;
           <button
-            style={{ cursor: "pointer" }}
             onClick={() => {
               setModalOpen(true);
             }}

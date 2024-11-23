@@ -1,0 +1,66 @@
+* {
+  background-color: #282c34;
+  color: white;
+  font-family: 'Futura';
+}
+
+/* Base button style */
+button {
+  background-color: #333;  /* Dark gray background */
+  color: white;            /* White text */
+  border: 2px solid #555;  /* Light gray border for contrast */
+  border-radius: 8px;      /* Rounded corners */
+  padding: 5px 10px;      /* Padding inside the button */
+  cursor: pointer;        /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect */
+button:hover {
+  background-color: #444;  /* Slightly lighter dark background */
+  transform: scale(1.05);   /* Slightly enlarge the button */
+}
+
+/* Focus effect (accessibility) */
+button:focus {
+  outline: none;  /* Removes default focus outline */
+  box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.5);  /* Adds a glowing effect */
+}
+
+/* Disabled button */
+button:disabled {
+  background-color: #555;  /* Darker gray when disabled */
+  color: #888;             /* Lighter gray text */
+  border: 2px solid #777;  /* Lighter border */
+  cursor: not-allowed;     /* Change cursor to indicate it's disabled */
+}
+
+/* Base input style */
+input {
+  background-color: #333;  /* Dark gray background */
+  color: white;            /* White text */
+  border: 2px solid #555;  /* Light gray border for contrast */
+  border-radius: 8px;      /* Rounded corners */
+  padding: 5px 10px;      /* Padding inside the input field */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus effects */
+}
+
+/* Input focus effect */
+input:focus {
+  outline: none;  /* Removes default focus outline */
+  border-color: #00ffff;  /* Light gray border on focus */
+  box-shadow: 0 0 8px 3px rgba(136, 136, 136, 0.5);  /* Adds glowing effect on focus */
+}
+
+/* Input placeholder style */
+input::placeholder {
+  color: #aaa;  /* Lighter gray for placeholder text */
+  opacity: 1;    /* Ensures full opacity for the placeholder */
+}
+
+/* Disabled input field */
+input:disabled {
+  background-color: #555;  /* Darker gray when disabled */
+  color: #888;             /* Lighter gray text */
+  border: 2px solid #777;  /* Lighter border */
+}

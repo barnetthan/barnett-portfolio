@@ -1,10 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "react-modal";
 import { Recipe } from "../pages/RecipePage";
 import { FaTrash } from "react-icons/fa";
-
-
-
 
 interface RecipeModalProps {
   modalOpen: boolean;
@@ -30,6 +27,17 @@ function RecipeModal({
   const [stepsError, setStepsError] = useState<boolean>(false);
   const [addError, setAddError] = useState<boolean>(false);
 
+  useEffect(() => {
+    if (modalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [modalOpen]);
+
   function addIngredient() {
     if (ingredientInput.length > 0) {
       let arr = [...ingredients, ingredientInput];
@@ -51,7 +59,7 @@ function RecipeModal({
       setStepsError(true);
     }
   }
-  
+
   function deleteStep(i: number) {
     let arr = [...steps];
     arr.splice(i, 1);
@@ -94,7 +102,17 @@ function RecipeModal({
   }
 
   return (
-    <Modal isOpen={modalOpen}>
+    <Modal
+      style={{
+        overlay: {
+          backgroundColor: "transparent",
+        },
+        content: {
+          backgroundColor: "#282c34",
+        },
+      }}
+      isOpen={modalOpen}
+    >
       <div style={{ overflowY: "scroll" }}>
         <h1>Add New Recipe</h1>
         <div>
@@ -109,25 +127,7 @@ function RecipeModal({
           />
         </div>
         <div>
-          <h2>
-            Ingredients (Include Quantity!)
-          </h2>
-          <ul>
-            {ingredients.map((ing, i) => (
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                <li>{ing}</li>
-                &nbsp;
-                <div
-                  onClick={() => {
-                    deleteIngredient(i);
-                  }}
-                  style={{cursor: "pointer"}}
-                >
-                  <FaTrash/>
-                </div>
-              </div>
-            ))}
-          </ul>
+          <h2>Ingredients (Include Quantity!)</h2>
           Add Ingredient:{" "}
           <input
             type="text"
@@ -137,31 +137,33 @@ function RecipeModal({
             }}
           />
           &nbsp;
-          <button style={{cursor: "pointer"}} onClick={addIngredient}>Add</button>
+          <button style={{ cursor: "pointer" }} onClick={addIngredient}>
+            Add
+          </button>
           {ingredientError ? (
             <div style={{ color: "red" }}>Ingredient cannot be blank.</div>
           ) : (
             <></>
           )}
+          <ul>
+            {ingredients.map((ing, i) => (
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <li>{ing}</li>
+                &nbsp;
+                <div
+                  onClick={() => {
+                    deleteIngredient(i);
+                  }}
+                  style={{ cursor: "pointer" }}
+                >
+                  <FaTrash />
+                </div>
+              </div>
+            ))}
+          </ul>
         </div>
         <div>
           <h2>Steps</h2>
-          <ol>
-            {steps.map((step, i) => (
-              <div style={{ display: "flex", flexDirection: "row" }}>
-              <li>{step}</li>
-              &nbsp;
-              <div
-                onClick={() => {
-                  deleteStep(i);
-                }}
-                style={{cursor: "pointer"}}
-              >
-                <FaTrash />
-              </div>
-            </div>
-            ))}
-          </ol>
           Add Step:{" "}
           <input
             type="text"
@@ -171,21 +173,45 @@ function RecipeModal({
             }}
           />
           &nbsp;
-          <button style={{cursor: "pointer"}} onClick={addStep}>Add</button>
+          <button style={{ cursor: "pointer" }} onClick={addStep}>
+            Add
+          </button>
           {stepsError ? (
             <div style={{ color: "red" }}>Step cannot be blank.</div>
           ) : (
             <></>
           )}
+          <ol>
+            {steps.map((step, i) => (
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <li>{step}</li>
+                &nbsp;
+                <div
+                  onClick={() => {
+                    deleteStep(i);
+                  }}
+                  style={{ cursor: "pointer" }}
+                >
+                  <FaTrash />
+                </div>
+              </div>
+            ))}
+          </ol>
         </div>
-        <button style={{cursor: "pointer", marginTop:"10vh"}} onClick={addRecipe}>Add Recipe!</button>
-        &nbsp;
-        <button style={{cursor: "pointer"}} onClick={closeModal}>Cancel</button>
-        {addError ? (
-          <div style={{ color: "red" }}>Not all fields filled.</div>
-        ) : (
-          <></>
-        )}
+        <div>
+          <button style={{ cursor: "pointer" }} onClick={addRecipe}>
+            Add Recipe!
+          </button>
+          &nbsp;
+          <button style={{ cursor: "pointer" }} onClick={closeModal}>
+            Cancel
+          </button>
+          {addError ? (
+            <div style={{ color: "red" }}>Not all fields filled.</div>
+          ) : (
+            <></>
+          )}
+        </div>
       </div>
     </Modal>
   );

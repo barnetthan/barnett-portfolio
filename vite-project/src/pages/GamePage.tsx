@@ -107,7 +107,7 @@ function GamePage() {
 
   return (
     <>
-      <NavBar curPage="game" />
+      <NavBar curPage="projects" />
       <div
         style={{
           display: "flex",
@@ -124,7 +124,7 @@ function GamePage() {
           It is Player {curMarker == "X" ? 1 : 2}'s turn ({curMarker})
         </div>
         <br />
-        <button style={{ cursor: "pointer" }} onClick={resetGame}>
+        <button onClick={resetGame}>
           Reset Game
         </button>
         <br />
