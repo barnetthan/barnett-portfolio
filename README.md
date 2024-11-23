@@ -1,5 +1,5 @@
-# react_projects
-Some React projects for fun and practice.
+# Barnett Han Portfolio Website
+My portfolio website.
 Dedicated to my girlfie Joanna!
 
 To start:
