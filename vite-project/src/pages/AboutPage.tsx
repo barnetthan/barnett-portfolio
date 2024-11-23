@@ -6,6 +6,7 @@ function AboutPage() {
     <>
       <NavBar curPage = "about"/>
       <h1> About </h1>
+      Professional and Personal tabs
     </>
   )
 }

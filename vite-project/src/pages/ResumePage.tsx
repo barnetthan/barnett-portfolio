@@ -1,16 +1,29 @@
-import NavBar from '../components/NavBar'
+import NavBar from "../components/NavBar";
 
 function ResumePage() {
+  const pdfUrl = "/BarnettHanResume.pdf";
 
   return (
     <>
-      <NavBar curPage = "resume"/>
-      <h1> Resume </h1>
-      <object data="file:///Users/barnetthan/Desktop/Internship%20Apps/BarnettHanResume.pdf" type="application/pdf" width="100%" height="100%">
-        <p>Alternative text - include a link <a href="file:///Users/barnetthan/Desktop/Internship%20Apps/BarnettHanResume.pdf">to the PDF!</a></p>
-      </object>
+      <NavBar curPage="resume" />
+      <div
+        style={{
+          width: "100%",
+          height: "90vh",
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "16px",
+        }}
+      >
+        <object
+          data={`${pdfUrl}#zoom=80`}
+          type="application/pdf"
+          width="60%"
+          height="100%"
+        ></object>
+      </div>
     </>
-  )
+  );
 }
 
 export default ResumePage;
