@@ -20,11 +20,12 @@ body {
 
 .site-title {
   cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Smooth animation for hover effects */
 }
 
 .site-title:hover {
   color: #ffffff;
-  transform: scale(1.02); /* Slight enlargement */
+  transform: scale(1.035); /* Slight enlargement */
   text-shadow: 0 0 10px #5bc0de; /* Glow effect with cyan shade */
   z-index: 100;
 }

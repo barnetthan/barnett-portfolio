@@ -14,11 +14,12 @@
   background: none;
   margin-right: 20px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Smooth animation for hover effects */
 }
 
 .icon:hover {
   color: #ffffff; /* Slightly brighter text on hover */
-  transform: scale(1.1); /* Slight enlargement */
+  transform: scale(1.15); /* Slight enlargement */
   filter: drop-shadow(0px 0px 5px rgba(91, 192, 222, 0.8));
   z-index: 100;
 }

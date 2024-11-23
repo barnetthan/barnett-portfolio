@@ -9,16 +9,16 @@ function ResumePage() {
       <div
         style={{
           width: "100%",
-          height: "90vh",
+          height: "87vh",
           display: "flex",
           justifyContent: "center",
           marginTop: "16px",
         }}
       >
         <object
-          data={`${pdfUrl}#zoom=80`}
+          data={`${pdfUrl}#zoom=90`}
           type="application/pdf"
-          width="60%"
+          width="65%"
           height="100%"
         ></object>
       </div>
