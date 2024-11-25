@@ -5,10 +5,12 @@ import alignable from "../assets/alignable-final.png";
 import ut from "../assets/ut-logo.png";
 import { handleMailtoClick } from "./HomePage";
 import "../styles/AboutPage.css";
+import "../styles/App.css"
+import Footer from "../components/Footer";
 
 function AboutPage() {
   return (
-    <>
+    <div className="page-outline-box">
       <NavBar curPage="about" />
       <div className="page-container">
         <div className="experience-container">
@@ -55,7 +57,8 @@ function AboutPage() {
         </div>
         <ImageBox />
       </div>
-    </>
+      <Footer/>
+    </div>
   );
 }
 

@@ -9,10 +9,12 @@ import TheVaultImage from "../assets/TheVaultLogo.jpg";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
 import "../styles/Projects.css";
+import Footer from "../components/Footer";
+import "../styles/App.css"
 
 function ProjectPage() {
   return (
-    <div style={{ marginBottom: "10px" }}>
+    <div className="page-outline-box">
       <NavBar curPage="projects" />
       <div style={{marginTop: "15px"}}>
         <div className="outerPageBox">
@@ -150,6 +152,8 @@ function ProjectPage() {
             </ul>
         </ProjectInfoBox>
       </div>
+      <Footer/>
+
     </div>
   );
 }

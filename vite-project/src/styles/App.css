@@ -64,3 +64,19 @@ input:disabled {
   color: #888;             /* Lighter gray text */
   border: 2px solid #777;  /* Lighter border */
 }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 14px;
+}
+
+.page-outline-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}

@@ -1,15 +1,16 @@
+import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
 function ResumePage() {
   const pdfUrl = "/BarnettHanResume.pdf";
 
   return (
-    <>
+    <div className="page-outline-box">
       <NavBar curPage="resume" />
       <div
         style={{
           width: "100%",
-          height: "87vh",
+          height: "81vh",
           display: "flex",
           justifyContent: "center",
           marginTop: "16px",
@@ -22,7 +23,8 @@ function ResumePage() {
           height="100%"
         ></object>
       </div>
-    </>
+      <Footer/>
+    </div>
   );
 }
 

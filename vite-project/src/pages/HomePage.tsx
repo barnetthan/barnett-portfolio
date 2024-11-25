@@ -4,7 +4,8 @@ import "../styles/HomePage.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { MdOutlineEmail } from "react-icons/md";
-
+import Footer from "../components/Footer";
+import "../styles/App.css"
 
 export const handleMailtoClick = () => {
   const email = "barnett.han@gmail.com";
@@ -18,7 +19,7 @@ export const handleMailtoClick = () => {
 
 function HomePage() {
   return (
-    <>
+    <div className="page-outline-box">
       <NavBar curPage="home" />
       <div className="outer-container">
         <div>
@@ -49,7 +50,8 @@ function HomePage() {
         </div>
         <img className="headshot-img" src={headshot} />
       </div>
-    </>
+      <Footer/>
+    </div>
   );
 }
 
