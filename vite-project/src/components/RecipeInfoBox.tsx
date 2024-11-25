@@ -7,7 +7,7 @@ interface RecipeInfoBoxProps {
 
 function RecipeInfoBox({ cur }: RecipeInfoBoxProps) {
   return (
-    <div style={{ paddingLeft: "2vh" }} className="infoBox">
+    <div style={{ paddingLeft: "2vh", backgroundColor: "#3A3F4B" }} className="infoBox">
       {cur ? (
         <>
           <div>

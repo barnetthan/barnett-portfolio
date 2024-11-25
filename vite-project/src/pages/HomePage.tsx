@@ -5,7 +5,8 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { MdOutlineEmail } from "react-icons/md";
 
-const handleMailtoClick = () => {
+
+export const handleMailtoClick = () => {
   const email = "barnett.han@gmail.com";
   const subject = "Hello there!";
   const body = "Just reaching out to talk about...";
@@ -23,9 +24,8 @@ function HomePage() {
         <div>
           <h1 style={{fontSize: "100px"}}>Hello! 你好!</h1>
           <h1>I am Barnett Han</h1>
-          <h1>Software Engineer @ UT Austin</h1>
+          <h2>Software Engineer & CS Student @ UT Austin</h2>
           <div className="icon-container">
-            {/* <h1 style={{fontSize: "16px"}}>Check out my socials!</h1> */}
             <FaGithub
               onClick={() => {
                 window.open("https://github.com/barnetthan", "_blank");

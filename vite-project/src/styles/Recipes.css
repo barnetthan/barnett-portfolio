@@ -24,3 +24,7 @@
   overflow-y: scroll;
   padding-right: 2vh;
 }
+
+.infoBox * {
+  background-color: #3A3F4B;
+}

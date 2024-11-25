@@ -1,0 +1,144 @@
+.image-box-outer {
+  min-height: 85vh; 
+  min-width: 34vw;
+  border-style: solid;
+  border-color: #4B5263;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /* Ensure borders are part of the dimensions */
+  align-items: center;
+  border-radius: 5%;
+  padding: 16px;
+  justify-content: center;
+  background-color: #2E333E;
+}
+
+.image-box-outer * {
+  background-color: #2E333E;
+}
+
+.image-box-outer img {
+  height: 75vh;
+  width: auto;
+  object-fit: contain; /* Scale the image to fit within the container while preserving its aspect ratio */
+  margin-bottom: 8px;
+  border-radius: 5%;
+  background: none;
+}
+
+.image-box-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 31vw;
+  background: none;
+}
+
+.image-box-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: none;
+}
+
+.arrow-icon {
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Smooth animation for hover effects */
+  font-size: 40px;
+  margin: 0; /* Remove extra margins */
+
+}
+
+.arrow-icon:hover {
+  color: #ffffff; /* Slightly brighter text on hover */
+  transform: scale(1.15); /* Slight enlargement */
+  filter: drop-shadow(0px 0px 5px rgba(91, 192, 222, 0.8));
+  z-index: 100;
+}
+
+/* Optional: Add focus or active state for better accessibility */
+.arrow-icon:focus,
+.arrow-icon:active {
+  outline: none;
+  color: #5bc0de; /* Highlight color */
+}
+
+.page-container {
+  padding: 16px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: left;
+  width: 60vw;
+  border-style: solid;
+  border-color: #4B5263;
+  border-radius: 5%;
+  background: none;
+  padding: 32px;
+  background-color: #2E333E;
+}
+
+.experience-container * {
+  background-color: #2E333E;
+}
+
+.experience-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+  margin-bottom: 40px;
+}
+
+.experience-detail img {
+  width: 25vw;
+  height: auto;
+  object-fit: contain; /* Ensure the image scales properly without distortion */
+}
+
+.experience-detail-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 25vw;
+  font-size: 18px;
+  margin: 0;
+}
+
+.experience-bio {
+  font-size: 20px;
+}
+
+.experience-bio p {
+  margin: 0;
+}
+
+.year-text {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.email {
+  transition: all 0.3s ease-in-out; /* Smooth animation for hover effects */
+  cursor: pointer;
+}
+
+.email:hover {
+  color: #ffffff; /* Slightly brighter text on hover */
+  transform: scale(1.1); /* Slight enlargement */
+  text-shadow: 0 0 10px #5bc0de; /* Glow effect with cyan shade */
+  z-index: 100;
+}
+
+/* Optional: Add focus or active state for better accessibility */
+.email:focus, .email:active {
+  outline: none;
+  color: #5bc0de; /* Highlight color */
+}

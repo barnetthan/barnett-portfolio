@@ -21,7 +21,6 @@ function ProjectPage() {
             route="https://github.com/barnetthan/Octomize"
             localRoute={false}
           >
-            <div className="projectDescriptionBox">
               <h2
                 onClick={() => {
                   window.open(
@@ -41,7 +40,6 @@ function ProjectPage() {
                 <li>Created with: React, TypeScript, Firebase</li>
                 <li>Linked to GitHub</li>
               </ul>
-            </div>
           </ProjectInfoBox>
           <ProjectInfoBox
             projectImage={InstaTabImage}
@@ -54,10 +52,10 @@ function ProjectPage() {
               }}
               className="project-title"
             >
-              InstaTab <FaGithub />{" "}
-              <FaExternalLinkAlt style={{ fontSize: "12px" }} />
+              InstaTab <FaGithub/>{" "}
+              <FaExternalLinkAlt style={{ fontSize: "12px"}} />
             </h2>
-            <ul>
+            <ul >
               <li>Automatically transform mp3 audio into guitar tabs!</li>
               <li>Created with: React, TypeScript, Python, Flask</li>
               <li>Linked to GitHub</li>
@@ -92,7 +90,6 @@ function ProjectPage() {
           route="todolist"
           localRoute={true}
         >
-          <div className="projectDescriptionBox">
             <h2
               onClick={() => {
                 window.open("/projects/todolist", "_blank");
@@ -108,14 +105,12 @@ function ProjectPage() {
               <li>Created with: React + TypeScript</li>
               <li>Runs locally - try it out now!</li>
             </ul>
-          </div>
         </ProjectInfoBox>
         <ProjectInfoBox
           projectImage={TicTacToeImage}
           route="tictactoe"
           localRoute={true}
         >
-          <div className="projectDescriptionBox">
             <h2
               onClick={() => {
                 window.open("/projects/tictactoe", "_blank");
@@ -130,14 +125,12 @@ function ProjectPage() {
               <li>Created with: React + TypeScript</li>
               <li>Runs locally - try it out now!</li>
             </ul>
-          </div>
         </ProjectInfoBox>
         <ProjectInfoBox
           projectImage={RecipeImage}
           route="recipes"
           localRoute={true}
         >
-          <div className="projectDescriptionBox">
             <h2
               onClick={() => {
                 window.open("/projects/recipes", "_blank");
@@ -155,7 +148,6 @@ function ProjectPage() {
               <li>Created with: React + TypeScript</li>
               <li>Runs locally - try it out now!</li>
             </ul>
-          </div>
         </ProjectInfoBox>
       </div>
     </div>
