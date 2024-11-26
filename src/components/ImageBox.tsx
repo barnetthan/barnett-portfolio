@@ -93,7 +93,7 @@ function ImageBox() {
             <div className="image-box-text">
               <div>{imageText[imageIndex]}</div>
               <div style={{ fontSize: "10px", marginTop: "8px" }}>
-                {imageArr.map((img, index) =>
+                {imageArr.map((_, index) =>
                   index == imageIndex ? <MdCircle /> : <MdOutlineCircle />
                 )}
               </div>

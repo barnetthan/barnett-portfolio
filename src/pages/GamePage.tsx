@@ -1,5 +1,5 @@
 import NavBar from "../components/NavBar";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import GameBox from "../components/GameBox";
 
 function GamePage() {

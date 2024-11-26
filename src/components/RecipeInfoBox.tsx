@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Recipe } from "../pages/RecipePage";
 
 interface RecipeInfoBoxProps {
