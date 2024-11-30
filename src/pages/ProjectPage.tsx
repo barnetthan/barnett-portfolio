@@ -14,7 +14,7 @@ import "../styles/App.css"
 
 function ProjectPage() {
   return (
-    <div className="page-outline-box">
+    <div style={{overflowX: "hidden"}} className="page-outline-box">
       <NavBar curPage="projects" />
       <div style={{marginTop: "15px"}}>
         <div className="outerPageBox">
@@ -94,7 +94,7 @@ function ProjectPage() {
         >
             <h2
               onClick={() => {
-                window.open("/projects/todolist", "_blank");
+                window.open("/barnett-portfolio#/projects/todolist", "_blank");
               }}
               style={{ display: "flex", alignItems: "center" }}
               className="project-title"
@@ -115,7 +115,7 @@ function ProjectPage() {
         >
             <h2
               onClick={() => {
-                window.open("/projects/tictactoe", "_blank");
+                window.open("/barnett-portfolio#/projects/tictactoe", "_blank");
               }}
               className="project-title"
             >
@@ -135,7 +135,7 @@ function ProjectPage() {
         >
             <h2
               onClick={() => {
-                window.open("/projects/recipes", "_blank");
+                window.open("/barnett-portfolio#/projects/recipes", "_blank");
               }}
               className="project-title"
             >

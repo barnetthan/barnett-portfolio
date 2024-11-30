@@ -1,5 +1,4 @@
-import { useNavigate, NavLink } from "react-router-dom";
-import React from "react";
+import { NavLink } from "react-router-dom";
 import "../styles/NavBar.css";
 import "@fontsource/roboto/400.css";
 
@@ -11,9 +10,9 @@ export default function NavBar({ curPage } : NavBarProps) {
 
   return (
     <nav className="nav">
-      <a href="/">
+      <NavLink to="/">
         <h1 className="site-title">Barnett Han</h1>
-      </a>
+      </NavLink>
       <ul style={{ marginRight: 50, marginTop: "18px" }}>
         <li>
           <NavLink
