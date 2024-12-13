@@ -17,11 +17,11 @@ function ResumePage() {
         }}
       >
         <object
-          data={`${pdfUrl}#zoom=90`}
+          data={`${pdfUrl}#zoom=100`}
           type="application/pdf"
-          width="65%"
+          width="80%"
           height="100%"
-        ></object>
+        />
       </div>
       <Footer/>
     </div>
