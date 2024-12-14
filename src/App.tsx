@@ -6,6 +6,7 @@ import ResumePage from "./pages/ResumePage";
 import RecipePage from "./pages/RecipePage";
 import ProjectPage from "./pages/ProjectPage";
 import AboutPage from "./pages/AboutPage";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/App.css";
 
 function App() {

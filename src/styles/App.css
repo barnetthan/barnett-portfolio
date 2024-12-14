@@ -80,3 +80,22 @@ input:disabled {
   justify-content: space-between;
   min-height: 100vh;
 }
+
+.glow {
+  color: #e6e6e6; /* Light text color for contrast */
+  transition: all 0.3s ease-in-out; /* Smooth animation for hover effects */
+  cursor: pointer;
+}
+
+.glow:hover {
+  color: #ffffff; /* Slightly brighter text on hover */
+  transform: scale(1.1); /* Slight enlargement */
+  text-shadow: 0 0 10px #5bc0de; /* Glow effect with cyan shade */
+  z-index: 100;
+}
+
+/* Optional: Add focus or active state for better accessibility */
+.glow:focus, .nav-item:active {
+  outline: none;
+  color: #5bc0de; /* Highlight color */
+}

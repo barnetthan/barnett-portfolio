@@ -1,10 +1,5 @@
-import "../styles/App.css"
+import "../styles/App.css";
 
 export default function Footer() {
-
-  return (
-    <div className="footer">
-      Barnett Han 2024 ©
-    </div>
-  );
+  return <div className="footer">© 2024 Barnett Han</div>;
 }

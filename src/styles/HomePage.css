@@ -4,6 +4,7 @@
   justify-content: space-evenly;
   align-items: center;
   margin-top: 36px;
+  max-width: 100%;
 }
 
 .icon-container {
@@ -37,4 +38,17 @@
   border-radius: 35%;
   border: solid #4b5263;
   background-color: white;
+  /* object-fit: cover; */
+  /* display: block; */
+}
+
+.hero-heading {
+  font-size: 100px; /* Default size for larger screens */
+}
+
+/* Adjust font sizes for mobile screens */
+@media (max-width: 767px) {
+  .hero-heading {
+    font-size: 70px; /* Smaller font size for mobile */
+  }
 }
