@@ -45,7 +45,7 @@ export default function NavBar({ curPage }: NavBarProps) {
                 onClick={() => {
                   navigateSite("/");
                 }}
-                className="sidebar-item"
+                className="sidebar-item glow"
                 style={{marginBottom: "0.4rem"}}
               >
                 <FaHome /> <div>&nbsp;Home</div>
@@ -54,7 +54,7 @@ export default function NavBar({ curPage }: NavBarProps) {
                 onClick={() => {
                   navigateSite("/projects");
                 }}
-                className="sidebar-item"
+                className="sidebar-item glow"
                 style={{marginBottom: "0.4rem"}}
               >
                 <PiProjectorScreenChart /> 
@@ -64,7 +64,7 @@ export default function NavBar({ curPage }: NavBarProps) {
                 onClick={() => {
                   navigateSite("/resume");
                 }}
-                className="sidebar-item"
+                className="sidebar-item glow"
                 style={{marginBottom: "0.4rem"}}
               >
                 <IoDocumentText /> <div>&nbsp;Resume</div>
@@ -73,7 +73,7 @@ export default function NavBar({ curPage }: NavBarProps) {
                 onClick={() => {
                   navigateSite("/about");
                 }}
-                className="sidebar-item"
+                className="sidebar-item glow"
                 style={{marginBottom: "0.4rem"}}
               >
                 <IoPerson /> <div>&nbsp;About</div>
@@ -86,7 +86,7 @@ export default function NavBar({ curPage }: NavBarProps) {
                 setMenuOpen(false);
               }}
               style={{ cursor: "pointer", fontSize: "1.2rem" }}
-              className="sidebar-item"
+              className="sidebar-item glow"
             >
               <IoClose /> &nbsp;Close
             </p>

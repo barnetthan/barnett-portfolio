@@ -49,6 +49,6 @@
 /* Adjust font sizes for mobile screens */
 @media (max-width: 767px) {
   .hero-heading {
-    font-size: 70px; /* Smaller font size for mobile */
+    font-size: 60px; /* Smaller font size for mobile */
   }
 }

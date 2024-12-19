@@ -20,13 +20,13 @@ function ProjectInfoBox({ children, projectImage, route, localRoute }: ProjectIn
   }
 
   return (
-    <div className="outerInfoBox">
+    <div className="outerInfoBox col-10">
       <motion.div
         whileHover={{
           borderColor: "#00ffff", // Glowing color (cyan)
           boxShadow: "0 0 10px 2px #00ffff", // Glow effect
         }}
-        style={{borderRadius: "10px", zIndex: 10000}}
+        style={{borderRadius: "10px", zIndex: 10000, display: "flex", justifyContent: "center"}}
       >
         <img onClick={navigatePage}className="image" src={projectImage}></img>
       </motion.div>

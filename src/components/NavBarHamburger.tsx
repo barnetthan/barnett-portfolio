@@ -9,7 +9,7 @@ interface NavBarHamburgerProps {
 function NavBarHamburger({ menuOpen, setMenuOpen }: NavBarHamburgerProps) {
 
   return (
-    <div className="d-block d-sm-none hamburger">
+    <div className="d-block d-sm-none hamburger glow">
       <GiHamburgerMenu style={{cursor: "pointer"}} onClick={() => {setMenuOpen(!menuOpen)}} />
     </div>
   );

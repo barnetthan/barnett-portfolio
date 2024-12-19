@@ -1,7 +1,7 @@
 import NavBar from "../components/NavBar";
 import ImageBox from "../components/ImageBox";
 import whitelogo from "../assets/paycom-final.png";
-import alignable from "../assets/alignable-final.png";
+// import alignable from "../assets/alignable-final.png";
 import ut from "../assets/ut-logo.png";
 import { handleMailtoClick } from "./HomePage";
 import "../styles/AboutPage.css";
@@ -14,28 +14,30 @@ function AboutPage() {
       <NavBar curPage="about" />
       <div className="page-container">
         <div className="experience-container">
-          <div className="experience-detail">
+          {/* <div className="experience-detail">
             <img src={alignable} />
             <div className="experience-detail-text">
               <div>Software Engineering Co-Op @ Alignable</div>
               <div className="year-text">01/2025 - Present</div>
             </div>
-          </div>
+          </div> */}
           <div className="experience-detail">
             <img src={whitelogo} />
             <div className="experience-detail-text">
-              <div>Software Development Intern @ Paycom</div>
-              <div className="year-text">
-                05/2023 - 08/2023, 05/2024 - 08/2024
+              <div className="experience-dates">
+                May 2023 - August 2023, May 2024 - August 2024
               </div>
+              <div className="experience-title">Software Development Intern</div>
+              <div className="experience-company">Paycom</div>
             </div>
           </div>
           <div className="experience-detail">
             <img src={ut} />
             <div className="experience-detail-text">
-              <div>BS, Computer Science w/ Minor in Business</div>
-              <div>University of Texas at Austin</div>
-              <div className="year-text">08/2022 - 05/2026</div>
+              <div className="experience-dates">August 2022 - May 2026</div>
+              <div className="experience-title">B.S. in Computer Science</div>
+              <div>w/ minor in Business</div>
+              <div className="experience-company">University of Texas at Austin</div>
             </div>
           </div>
 
