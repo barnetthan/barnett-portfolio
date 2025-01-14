@@ -39,57 +39,60 @@ export default function NavBar({ curPage }: NavBarProps) {
       </nav>
       {menuOpen ? (
         <div className="sidebar">
-          <div className="sidebar-list">
-            <ul>
-              <li
+          <div className="sidebar-top">
+            <div className="sidebar-list">
+              <ul>
+                <li
+                  onClick={() => {
+                    navigateSite("/");
+                  }}
+                  className="sidebar-item glow"
+                  style={{marginBottom: "0.4rem"}}
+                >
+                  <FaHome /> <div>&nbsp;Home</div>
+                </li>
+                <li
+                  onClick={() => {
+                    navigateSite("/projects");
+                  }}
+                  className="sidebar-item glow"
+                  style={{marginBottom: "0.4rem"}}
+                >
+                  <PiProjectorScreenChart /> 
+                  <div>&nbsp;Projects</div>
+                </li>
+                <li
+                  onClick={() => {
+                    navigateSite("/resume");
+                  }}
+                  className="sidebar-item glow"
+                  style={{marginBottom: "0.4rem"}}
+                >
+                  <IoDocumentText /> <div>&nbsp;Resume</div>
+                </li>
+                <li
+                  onClick={() => {
+                    navigateSite("/about");
+                  }}
+                  className="sidebar-item glow"
+                  style={{marginBottom: "0.4rem"}}
+                >
+                  <IoPerson /> <div>&nbsp;About</div>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p
                 onClick={() => {
-                  navigateSite("/");
+                  setMenuOpen(false);
                 }}
+                style={{ cursor: "pointer", fontSize: "1.2rem" }}
                 className="sidebar-item glow"
-                style={{marginBottom: "0.4rem"}}
               >
-                <FaHome /> <div>&nbsp;Home</div>
-              </li>
-              <li
-                onClick={() => {
-                  navigateSite("/projects");
-                }}
-                className="sidebar-item glow"
-                style={{marginBottom: "0.4rem"}}
-              >
-                <PiProjectorScreenChart /> 
-                <div>&nbsp;Projects</div>
-              </li>
-              <li
-                onClick={() => {
-                  navigateSite("/resume");
-                }}
-                className="sidebar-item glow"
-                style={{marginBottom: "0.4rem"}}
-              >
-                <IoDocumentText /> <div>&nbsp;Resume</div>
-              </li>
-              <li
-                onClick={() => {
-                  navigateSite("/about");
-                }}
-                className="sidebar-item glow"
-                style={{marginBottom: "0.4rem"}}
-              >
-                <IoPerson /> <div>&nbsp;About</div>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p
-              onClick={() => {
-                setMenuOpen(false);
-              }}
-              style={{ cursor: "pointer", fontSize: "1.2rem" }}
-              className="sidebar-item glow"
-            >
-              <IoClose /> &nbsp;Close
-            </p>
+                <IoClose /> &nbsp;Close
+              </p>
+            </div>
+
           </div>
         </div>
       ) : (

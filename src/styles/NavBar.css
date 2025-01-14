@@ -119,12 +119,15 @@ body {
   overflow: hidden;
   transition: width 0.3s ease-in-out;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
   padding: 1rem;
   font-size: 1.6rem;
   z-index: 100000;
+}
+
+.sidebar-top {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .sidebar li {

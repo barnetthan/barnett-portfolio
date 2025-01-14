@@ -1,7 +1,9 @@
 import NavBar from "../components/NavBar";
 import ImageBox from "../components/ImageBox";
-import whitelogo from "../assets/paycom-final.png";
+import paycom from "../assets/paycom-final.png";
 // import alignable from "../assets/alignable-final.png";
+import google from "../assets/googlelogo.png";
+import c1 from "../assets/c1logo.png";
 import ut from "../assets/ut-logo.png";
 import { handleMailtoClick } from "./HomePage";
 import "../styles/AboutPage.css";
@@ -22,7 +24,27 @@ function AboutPage() {
             </div>
           </div> */}
           <div className="experience-detail">
-            <img src={whitelogo} />
+            <img src={google} />
+            <div className="experience-detail-text">
+              <div className="experience-dates">
+                Incoming August 2025
+              </div>
+              <div className="experience-title">Software Engineer Intern</div>
+              <div className="experience-company">Google</div>
+            </div>
+          </div>
+          <div className="experience-detail">
+            <img src={c1} />
+            <div className="experience-detail-text">
+              <div className="experience-dates">
+                Incoming June 2025
+              </div>
+              <div className="experience-title">Software Engineer Intern (TIP)</div>
+              <div className="experience-company">Capital One</div>
+            </div>
+          </div>
+          <div className="experience-detail">
+            <img src={paycom} />
             <div className="experience-detail-text">
               <div className="experience-dates">
                 May 2023 - August 2023, May 2024 - August 2024
