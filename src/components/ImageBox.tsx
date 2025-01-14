@@ -29,7 +29,7 @@ function ImageBox() {
     "With my family at Acadia National Park",
     "With my girlfriend after kayaking adventure",
     "Me playing UT Intramural Basketball",
-    "First time playing poker in a casino (made $200!)",
+    "1st time playing poker in casino (up $200!)",
     "Winstar Casino trip with my friends",
   ];
 
@@ -70,7 +70,7 @@ function ImageBox() {
   }
 
   return (
-    <div className="image-box-outer d-none d-sm-block">
+    <div className="image-box-outer">
       {loading ? (
         <TailSpin
           visible={true}

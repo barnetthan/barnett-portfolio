@@ -79,8 +79,8 @@ input:disabled {
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
-  height: 100vh;
-  overflow-y: scroll;
+  min-height: 100vh;
+  /* overflow-y: scroll; */
 }
 
 .glow {

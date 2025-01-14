@@ -15,6 +15,9 @@ function AboutPage() {
     <div className="page-outline-box">
       <NavBar curPage="about" />
       <div className="page-container">
+        <div className="d-block d-sm-none">
+          <ImageBox />
+        </div>
         <div className="experience-container">
           {/* <div className="experience-detail">
             <img src={alignable} />
@@ -83,7 +86,9 @@ function AboutPage() {
             </div>
           </div>
         </div>
-        <ImageBox />
+        <div className="d-none d-sm-block">
+          <ImageBox />
+        </div>
       </div>
       <Footer />
     </div>
