@@ -22,7 +22,7 @@ function HomePage() {
     <div className="page-outline-box">
       <NavBar curPage="home" />
       <div className="container">
-        <div className="row align-items-center">
+        <div className="row align-items-center mt-0 mt-sm-5">
           <div className="col-12 col-md-7 order-2 order-md-1 text-md-start text-center">
             <h1 className="hero-heading">Hello! 你好!</h1>
             <h1>I am Barnett Han</h1>

@@ -70,7 +70,7 @@ function ImageBox() {
   }
 
   return (
-    <div className="image-box-outer">
+    <div className="image-box-outer d-none d-sm-block">
       {loading ? (
         <TailSpin
           visible={true}

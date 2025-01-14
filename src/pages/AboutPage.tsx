@@ -3,11 +3,11 @@ import ImageBox from "../components/ImageBox";
 import paycom from "../assets/paycom-final.png";
 // import alignable from "../assets/alignable-final.png";
 import google from "../assets/googlelogo.png";
-import c1 from "../assets/c1logo.png";
+// import c1 from "../assets/c1logo.png";
 import ut from "../assets/ut-logo.png";
 import { handleMailtoClick } from "./HomePage";
-import "../styles/AboutPage.css";
-import "../styles/App.css"
+// import "../styles/AboutPage.css";
+import "../styles/App.css";
 import Footer from "../components/Footer";
 
 function AboutPage() {
@@ -26,14 +26,12 @@ function AboutPage() {
           <div className="experience-detail">
             <img src={google} />
             <div className="experience-detail-text">
-              <div className="experience-dates">
-                Incoming August 2025
-              </div>
+              <div className="experience-dates">Incoming August 2025</div>
               <div className="experience-title">Software Engineer Intern</div>
               <div className="experience-company">Google</div>
             </div>
           </div>
-          <div className="experience-detail">
+          {/* <div className="experience-detail">
             <img src={c1} />
             <div className="experience-detail-text">
               <div className="experience-dates">
@@ -42,14 +40,16 @@ function AboutPage() {
               <div className="experience-title">Software Engineer Intern (TIP)</div>
               <div className="experience-company">Capital One</div>
             </div>
-          </div>
+          </div> */}
           <div className="experience-detail">
             <img src={paycom} />
             <div className="experience-detail-text">
               <div className="experience-dates">
                 May 2023 - August 2023, May 2024 - August 2024
               </div>
-              <div className="experience-title">Software Development Intern</div>
+              <div className="experience-title">
+                Software Development Intern
+              </div>
               <div className="experience-company">Paycom</div>
             </div>
           </div>
@@ -59,7 +59,9 @@ function AboutPage() {
               <div className="experience-dates">August 2022 - May 2026</div>
               <div className="experience-title">B.S. in Computer Science</div>
               <div>w/ minor in Business</div>
-              <div className="experience-company">University of Texas at Austin</div>
+              <div className="experience-company">
+                University of Texas at Austin
+              </div>
             </div>
           </div>
 
@@ -75,13 +77,15 @@ function AboutPage() {
             </p>
             <div style={{ marginTop: "16px" }}>
               Contact me at:&nbsp;
-              <span onClick={handleMailtoClick} className="email">barnett.han@gmail.com</span>
+              <span onClick={handleMailtoClick} className="email">
+                barnett.han@gmail.com
+              </span>
             </div>
           </div>
         </div>
         <ImageBox />
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
