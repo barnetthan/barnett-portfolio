@@ -10,7 +10,7 @@ function ResumePage() {
       <NavBar curPage="resume" />
 
       <div
-        className="d-flex d-sm-none justify-content-center align-items-center mt-5 mt-sm-0"
+        className="d-flex d-sm-none justify-content-center align-items-center pt-5 pt-sm-0"
         onClick={() => {
           window.open(
             "https://drive.google.com/file/d/1E70BxrCuzRiGxcb7yYohZQV3vp_rH_5S/view?usp=sharing",
