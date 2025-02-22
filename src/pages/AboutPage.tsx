@@ -1,14 +1,14 @@
-import NavBar from "../components/NavBar";
-import ImageBox from "../components/ImageBox";
 import paycom from "../assets/paycom-final.png";
+import ImageBox from "../components/ImageBox";
+import NavBar from "../components/NavBar";
 // import alignable from "../assets/alignable-final.png";
+import c1 from "../assets/c1logo.png";
 import google from "../assets/googlelogo.png";
-// import c1 from "../assets/c1logo.png";
 import ut from "../assets/ut-logo.png";
 import { handleMailtoClick } from "./HomePage";
 // import "../styles/AboutPage.css";
-import "../styles/App.css";
 import Footer from "../components/Footer";
+import "../styles/App.css";
 
 function AboutPage() {
   return (
@@ -34,7 +34,7 @@ function AboutPage() {
               <div className="experience-company">Google</div>
             </div>
           </div>
-          {/* <div className="experience-detail">
+          <div className="experience-detail">
             <img src={c1} />
             <div className="experience-detail-text">
               <div className="experience-dates">
@@ -43,7 +43,7 @@ function AboutPage() {
               <div className="experience-title">Software Engineer Intern (TIP)</div>
               <div className="experience-company">Capital One</div>
             </div>
-          </div> */}
+          </div>
           <div className="experience-detail">
             <img src={paycom} />
             <div className="experience-detail-text">

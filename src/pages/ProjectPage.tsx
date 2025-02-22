@@ -6,6 +6,7 @@ import TicTacToeImage from "../assets/tictactoe.jpg";
 import OctomizeImage from "../assets/octomize.png";
 import InstaTabImage from "../assets/instatabLogo.jpg";
 import TheVaultImage from "../assets/TheVaultLogo.jpg";
+import SwiftWeatherImage from '../assets/weather.png';
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
 import "../styles/Projects.css";
@@ -18,6 +19,36 @@ function ProjectPage() {
       <NavBar curPage="projects" />
       <div className="container mt-3">
         <div className="row">
+        <div className="col-12 col-md-6 col-lg-4 mb-4" style={{display: "flex", justifyContent: "center"}}>
+            <ProjectInfoBox
+              projectImage={SwiftWeatherImage}
+              route="https://barnetthan.github.io/cs378-p4/"
+              localRoute={false}
+            >
+              <h2
+                onClick={() => {
+                  window.open(
+                    "https://barnetthan.github.io/cs378-p4/",
+                    "_blank"
+                  );
+                }}
+                style={{ display: "flex", alignItems: "center" }}
+                className="project-title"
+              >
+                SwiftWeather
+                <BsFillRocketTakeoffFill
+                  style={{ fontSize: "20px", marginLeft: "10px" }}
+                />
+              </h2>
+              <ul>
+                <li>
+                  View weather forecasts at the blink of an eye! (Designed for mobile)
+                </li>
+                <li>Created with: React, TypeScript, OpenMeteo API</li>
+                <li><FaGithub /> <a href="https://github.com/barnetthan/cs378-p4" target="_blank">GitHub Link</a></li>
+              </ul>
+            </ProjectInfoBox>
+          </div>
           <div className="col-12 col-md-6 col-lg-4 mb-4" style={{display: "flex", justifyContent: "center"}}>
             <ProjectInfoBox
               projectImage={OctomizeImage}
