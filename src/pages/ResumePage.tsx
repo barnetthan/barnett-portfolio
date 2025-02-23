@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
 function ResumePage() {
-  const pdfUrl = "/barnett-portfolio/BarnettHanResume.pdf";
+  const pdfUrl = "/BarnettHanResume.pdf";
 
   return (
     <div className="page-outline-box">

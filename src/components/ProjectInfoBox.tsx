@@ -13,7 +13,7 @@ function ProjectInfoBox({ children, projectImage, route, localRoute }: ProjectIn
 
   function navigatePage() {
     if (localRoute) {
-      window.open(`/barnett-portfolio#/projects/${route}`, 'blank');
+      window.open(`/#/projects/${route}`, 'blank');
     } else {
       window.open(route, '_blank');
     }

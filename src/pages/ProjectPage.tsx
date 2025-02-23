@@ -135,7 +135,7 @@ function ProjectPage() {
               <h2
                 onClick={() => {
                   window.open(
-                    "/barnett-portfolio#/projects/todolist",
+                    "/#/projects/todolist",
                     "_blank"
                   );
                 }}
@@ -163,7 +163,7 @@ function ProjectPage() {
               <h2
                 onClick={() => {
                   window.open(
-                    "/barnett-portfolio#/projects/tictactoe",
+                    "/#/projects/tictactoe",
                     "_blank"
                   );
                 }}
@@ -189,7 +189,7 @@ function ProjectPage() {
             >
               <h2
                 onClick={() => {
-                  window.open("/barnett-portfolio#/projects/recipes", "_blank");
+                  window.open("/#/projects/recipes", "_blank");
                 }}
                 className="project-title"
               >
