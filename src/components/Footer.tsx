@@ -1,5 +1,7 @@
 import "../styles/App.css";
 
 export default function Footer() {
-  return <div className="footer">© 2024 Barnett Han</div>;
+  const currentYear = new Date().getFullYear(); // Get the current year
+
+  return <div className="footer">© {currentYear} Barnett Han</div>;
 }
